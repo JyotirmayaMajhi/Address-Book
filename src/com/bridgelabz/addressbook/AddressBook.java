@@ -3,7 +3,7 @@ package com.bridgelabz.addressbook;
 import java.util.*;
 public class AddressBook {
 
-	private static final String phoneNumber = null;
+	private String phoneNumber;
 	private String FirstName;
 	private String LastName;
 	private String Address;
@@ -97,9 +97,13 @@ public class AddressBook {
 		
 		Iterator<AddressBook> itr = al.iterator();
 		
-		
-			
-		
+		while (itr.hasNext()) {
+			AddressBook ab = (AddressBook) itr.next();
+			System.out.println("\n............................................\n");
+			System.out.println(ab.FirstName + "\n" + ab.LastName + "\n" + ab.Address +  
+					  "\n" + ab.Zip + "\n" + ab.phoneNumber + "\n" + ab.email
+					+ "\n");
+		}
 
 	}
 }
